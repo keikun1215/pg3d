@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+* {
+	font-family: "Arial", "メイリオ";
+}
+#load {
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	height: 100%;
+  width: 100%;
+}
+#loadlogo {
+	opacity: 1;
+	animation: loadop 1s linear forwards;
+	animation-delay: 1.5s;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+#loadbg1 {
+	height: 100%;
+  width: 50%;
+	background: #5eabdb;
+	animation: loadopen 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+#loadbg2 {
+	height: 100%;
+  width: 50%;
+	background: #4182ab;
+	animation: loadopen 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+@keyframes loadopen {
+	from {
+		width: 50%;
+	}
+	to {
+		width: 0px;
+	}
+}
+@keyframes loadop {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
