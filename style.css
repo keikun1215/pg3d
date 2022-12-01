@@ -4,16 +4,20 @@ html, body {
 }
 * {
 	font-family: "Arial", "メイリオ";
+	margin: 0;
 }
 #load {
-	position: absolute;
+	z-index: 3;
+	position: fixed;
 	display: flex;
 	top: 0;
 	left: 0;
 	height: 100%;
   width: 100%;
+	animation: del 2s linear forwards;
 }
 #loadlogo {
+	z-index: 3;
 	opacity: 1;
 	animation: loadop 1s linear forwards;
 	animation-delay: 1.5s;
@@ -30,6 +34,7 @@ html, body {
 	height: 100%;
   width: 50%;
 	background: #5eabdb;
+	visibility: visible;
 	animation: loadopen 1s ease-in-out forwards;
   animation-delay: 1s;
 }
@@ -37,15 +42,45 @@ html, body {
 	height: 100%;
   width: 50%;
 	background: #4182ab;
+	display: block;
 	animation: loadopen 1s ease-in-out forwards;
   animation-delay: 1s;
 }
+#head {
+	visibility: visible;
+	position: relative;
+	height: 400px;
+  width: 100%;
+	background-image: url("https://cdn.keikun1215.cf/assets/pg3d/keikun1215cl.webp?aa");
+  background-size: cover;
+	border-bottom: 5px solid #000;
+}
+#headtit {
+	z-index: 1;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+	font-size: 40px;
+	font-weight: bolder;
+	color: #fff;
+	-webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+}
 @keyframes loadopen {
-	from {
+	0% {
+		visibility: visible;
 		width: 50%;
 	}
-	to {
+	99% {
+		visibility: visible;
 		width: 0px;
+	}
+	100% {
+		width: 0px;
+		visibility: hidden;
 	}
 }
 @keyframes loadop {
@@ -54,5 +89,10 @@ html, body {
 	}
 	to {
 		opacity: 0;
+	}
+}
+@keyframes del {
+	100% {
+		visibility: hidden;
 	}
 }
