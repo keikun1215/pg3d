@@ -1,98 +1,112 @@
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
+
 * {
-	font-family: "Arial", "メイリオ";
-	margin: 0;
+  font-family: "Arial", "メイリオ";
+  margin: 0;
 }
+
 #load {
-	z-index: 3;
-	position: fixed;
-	display: flex;
-	top: 0;
-	left: 0;
-	height: 100%;
+  z-index: 3;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-	animation: del 2s linear forwards;
+  animation: del 2s linear forwards;
 }
+
 #loadlogo {
-	z-index: 3;
-	opacity: 1;
-	animation: loadop 1s linear forwards;
-	animation-delay: 1.5s;
-	width: 50px;
-	height: 50px;
-	position: absolute;
+  z-index: 3;
+  opacity: 1;
+  animation: loadop 1s linear forwards;
+  animation-delay: 1.5s;
+  width: 50px;
+  height: 50px;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
 #loadbg1 {
-	height: 100%;
+  height: 100%;
   width: 50%;
-	background: #5eabdb;
-	visibility: visible;
-	animation: loadopen 1s ease-in-out forwards;
+  background: #5eabdb;
+  visibility: visible;
+  animation: loadopen 1s ease-in-out forwards;
   animation-delay: 1s;
 }
+
 #loadbg2 {
-	height: 100%;
+  height: 100%;
   width: 50%;
-	background: #4182ab;
-	display: block;
-	animation: loadopen 1s ease-in-out forwards;
+  background: #4182ab;
+  display: block;
+  animation: loadopen 1s ease-in-out forwards;
   animation-delay: 1s;
 }
+
 #head {
-	visibility: visible;
-	position: relative;
-	height: 400px;
+  visibility: visible;
+  position: relative;
+  height: 400px;
   width: 100%;
-	background-image: url("https://cdn.keikun1215.cf/assets/pg3d/keikun1215cl.webp?aa");
+  background-image: url("https://cdn.keikun1215.cf/assets/pg3d/keikun1215cl.webp?aa");
   background-size: cover;
-	border-bottom: 5px solid #000;
+  border-bottom: 5px solid #000;
 }
+
 #headtit {
-	z-index: 1;
-	position: absolute;
+  z-index: 1;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-	font-size: 40px;
-	font-weight: bolder;
-	color: #fff;
-	-webkit-text-stroke: 1px #000;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
   text-stroke: 1px #000;
 }
+
 @keyframes loadopen {
-	0% {
-		visibility: visible;
-		width: 50%;
-	}
-	99% {
-		visibility: visible;
-		width: 0px;
-	}
-	100% {
-		width: 0px;
-		visibility: hidden;
-	}
+  0% {
+    visibility: visible;
+    width: 50%;
+  }
+
+  99% {
+    visibility: visible;
+    width: 0px;
+  }
+
+  100% {
+    width: 0px;
+    visibility: hidden;
+  }
 }
+
 @keyframes loadop {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
+
 @keyframes del {
-	100% {
-		visibility: hidden;
-	}
+  100% {
+    visibility: hidden;
+  }
 }
